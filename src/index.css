@@ -22,3 +22,62 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.card {
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  min-height: 350px;
+  opacity: 0.8;
+}
+
+.title {
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+}
+
+.quote {
+  width: 100%;
+  min-height: 250px;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.btn {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-back {
+  border: 1px solid red;
+  color: white;
+  background: red;
+  padding: 10px;
+  opacity: 1;
+  transition: opacity .3s linear;
+}
+
+.btn-back:hover {
+  opacity: 0.7;
+}
+
+.btn-ahead {
+  border: 1px solid green;
+  color: white;
+  background: green;
+  padding: 10px;
+  opacity: 1;
+  transition: opacity .3s linear;
+}
+
+.btn-ahead:hover {
+  opacity: 0.7;
+}
