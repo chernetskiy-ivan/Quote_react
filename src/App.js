@@ -1,7 +1,12 @@
 import React from 'react'
+import Container from '../src/components/Container'
 
 function App() {
-    return null
+    return (
+        <Container>
+
+        </Container>
+    )
 }
 
 export default App;
