@@ -1,15 +1,17 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 
 function Card() {
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(0)
     const [title,setTitle] = useState('Привет')
     const [body, setBody] = useState('Привет')
 
     const increment = () => {
         setCount( count + 1)
-        console.log(count)
-        getContent(count)
+    }
+
+    const decrement = () => {
+        setCount(count - 1)
     }
 
     function getContent(number){
@@ -25,12 +27,16 @@ function Card() {
             })
     }
 
+    useEffect( () => {
+        getContent(count)
+    }, [count])
+
     return (
         <div className='card'>
             <div className='title'>{title}</div>
             <div className='quote'>{body}</div>
             <div className='footer'>
-                <div className='btn btn-back'>Назад</div>
+                <div className='btn btn-back' onClick={decrement}>Назад</div>
                 <div className='btn btn-ahead' onClick={increment}>Вперед</div>
             </div>
         </div>
