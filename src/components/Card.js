@@ -15,16 +15,21 @@ function Card() {
     }
 
     function getContent(number){
-        fetch(`https://jsonplaceholder.typicode.com/posts?id=${number}`)
-            .then(response => response.json())
-            .then(data => {
-                data.forEach( element => {
-                    setTitle(element.title)
-                    setBody(element.body)
-                    console.log(element)
-                    console.log(element.title)
+        if(number >= 1) {
+            fetch(`https://jsonplaceholder.typicode.com/posts?id=${number}`)
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach( element => {
+                        setTitle(element.title)
+                        setBody(element.body)
+                        console.log(element)
+                        console.log(element.title)
+                    })
                 })
-            })
+        } else {
+            setTitle('Вы в начале')
+            setBody('Да да, Вы в начале')
+        }
     }
 
     useEffect( () => {
